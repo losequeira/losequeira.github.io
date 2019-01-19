@@ -1,0 +1,64 @@
+.flyer-welcome {
+    h1 {
+        font-weight: 300;
+        letter-spacing: -.0625rem;
+        line-height: 1;
+    }
+    p {
+        font-size: 2rem;
+        letter-spacing: 0;
+    }
+
+    .welcome-row {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+
+        .welcome-col-text {
+            position: relative;
+            height: 100vh;
+            width: 50%;
+            z-index: 2;
+
+            .centered-text {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                -ms-transform: translate(-50%, -50%);
+                transform: translate(-50%, -50%);
+            }
+        }
+
+        .welcome-col-image {
+            position: relative;
+            height: 100vh;
+            width: 50%;
+            z-index: 1;
+
+            img.flyer-image {
+                position: absolute;
+                max-width: 35rem;
+                top: 50%;
+                left: 50%;
+                -ms-transform: translate(-50%, -50%);
+                transform: translate(-50%, -50%);
+            }
+        }
+    }
+}
+
+
+@media only screen and (max-width: 900px) {
+    .welcome-col-text, .welcome-col-image {
+        width: 100% !important;
+    }
+
+    .welcome-col-image {
+        position: fixed !important;
+    }
+
+    .welcome-col-text {
+        height: auto !important;
+        margin-top: 5rem;
+    }
+}
