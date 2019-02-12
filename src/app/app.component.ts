@@ -9,7 +9,7 @@ import { DomSanitizer, SafeResourceUrl } from '@angular/platform-browser';
 export class AppComponent {
   title = 'dcalc';
   formURl: SafeResourceUrl;
-  formSource = 'https://docs.google.com/forms/d/e/1FAIpQLSeAovHRsG4I5-ubQqObSW1-hgLai9ceV4LbS1fbimIa8pCm3g/viewform?embedded=true';
+  formSource = 'https://docs.google.com/forms/d/e/1FAIpQLSfuTYdXQ4VDxQjKvBCImXWaFASSyc3m7a9yyM0FfdvVllgcfw/viewform?embedded=true';
 
   constructor(private sanitizer: DomSanitizer) {
     this.formURl = this.sanitizer.bypassSecurityTrustResourceUrl(this.formSource);
