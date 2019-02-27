@@ -3,7 +3,8 @@ html, body { height: 100%; overflow-x: hidden; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 
 .fullscreen {
-    height: 100vh;
+    height: auto;
+    min-height: 100vh;
 }
 
 
@@ -12,20 +13,24 @@ $red: #d92d5a;
 $orange: #fd8a13;
 $yellow: #ffea01;
 $green: #0ed166;
+$dark-green: #70b6d8;
 $blue: #5b78f8;
 $purple: #8a32f7;
 $dark-purple: #2d0f52;
 $white: #fff;
+$pink: #df89e8;
 
 $colors: (
     "red": $red,
     "orange": $orange,
     "yellow": $yellow,
     "green": $green,
+    "dark-green": $dark-green,
     "blue": $blue,
     "purple": $purple,
     "dark-purple": $dark-purple,
-    "white": $white
+    "white": $white,
+    "pink": $pink
 ) !default;
 
 $directions: (
@@ -64,15 +69,55 @@ $directions: (
 
   // FONT
 
-  @font-face {
-      font-family: Avenir;
-      src: url(../src/assets/fonts/AvenirNextLTPro-Bold.otf)
-  }
+@font-face {
+    font-family: 'AvenirBold';
+    src: url(../src/assets/fonts/AvenirNextLTPro-Bold.otf),
+        url(../src/assets/fonts/AvenirNextLTPro-BoldCn.otf),
+        url(../src/assets/fonts/AvenirNextLTPro-BoldCnIt.otf);
+    font-weight: normal;
+    font-style: normal;
+}
 
+@font-face {
+    font-family: 'AvenirNormal';
+    src: url(../src/assets/fonts/AvenirNextLTPro-Regular.otf);
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'AvenirLight';
+    src: url(../src/assets/fonts/AvenirNextLTPro-UltLtCn.otf);
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Scriptina Pro';
+    src: url(../src/assets/fonts/ScriptinaPro.woff) format('woff');
+    font-style: normal;
+    font-weight: normal;
+}
 
 
  h1, h2, h3, h4, h5, p {
-    font-family: Avenir;
+    font-family: AvenirBold;
+}
+
+.script {
+    font-family: 'Scriptina Pro';
+}
+
+.light-font {
+    font-family: AvenirLight
+}
+
+.regular-font {
+    font-family: AvenirNormal;
+}
+
+.bold {
+    font-family: AvenirBold;
 }
 
 .relative {
@@ -83,10 +128,13 @@ $directions: (
     position: absolute !important;
 }
 
+.none {
+    display: none !important;
+}
+
 .no-margin {
     margin: 0 !important;
 }
-
 
 
 
@@ -243,3 +291,11 @@ background-blend-mode: multiply;
         transform: translate(0)
     }
 }
+
+
+
+
+/*
+<div>Icons made by <a href="https://flat-icons.com/" title="Flat Icons">Flat Icons</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a> is licensed by <a href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0" target="_blank">CC 3.0 BY</a></div>
+
+*/
