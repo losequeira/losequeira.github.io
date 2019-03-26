@@ -28,233 +28,183 @@
     }
 }
 
-.welcome-col-text {
-    position: relative;
-    height: 100vh;
-    width: 100%;
-    z-index: 2;
 
-    .centered-text {
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        -ms-transform: translate(-50%, -50%);
-        transform: translate(-50%, -50%);
-    }
-}
-
-.space-icon {
-    height: 85vw;
-    opacity: .4;
-}
-
-.space-icon.center {
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-}
 
 
 .front-flyer {
-    .front-row{
-        max-height:100vh;
-
-        .front-banner {
-            position: relative;
-            display: flex;
-            height: 100vh;
-            max-height: 100vh;
-
-            .logo-image {
-                position: absolute;
-                -o-object-fit: cover;
-                height: calc(100vh - 35vh);
-                margin-top: -4rem;
-                margin-left: 3rem;
-            }
-
-            .logo-text {
-                position: absolute;
-                top: 50%;
-                font-size: 9vw;
-                line-height:1;
-                text-align: right;
-                right: 4rem;
-                /*border: 2px dashed white; */
-                padding: 0.75rem;
-                margin: 3rem 0 0 0;
-                /* text-shadow: 6px -9px 0 #5b78f8; */
-                transform: translateY(-50%);
-            }
-
-            .row-button-suscribe {
-                position: absolute;
-                bottom: 0;
-                left: 3rem;
-                z-index: 999;
-
-                .project-description {
-                    width: 400px;
-                    text-align: justify;
-                }
-
-                a {
-                    height: 3rem;
-                    line-height: 42px;
-                }
-            }
-        }
-    }
-}
-
-.b2b-flyer {
-    display: flex;
-    position: relative;
-    height: 150vh;
-
-    .crossed-row {
-        height: 100vh;
+    .content {
+        display: inline-block;
         width: 100%;
-        transform: skew(0deg, 40deg);
-        margin-top: -7rem;
+        padding: 7rem 2rem;
+
+        img.flyer {
+            float: right;
+            max-height: 32rem;
+        }
+    }
+
+    .logo-image {
         position: absolute;
-        box-shadow: 0px 0px 10px #333;
+        -o-object-fit: cover;
+        height: calc(100vh - 35vh);
+        margin-top: -4rem;
+        margin-left: 3rem;
     }
 
-    .row-content {
-        z-index: 1;
-
-        .b2b-title-basics {
-            font-size: 10rem;
-        }
-
-        .b2b-title-back {
-            position: absolute;
-
-            font-size: 40vw;
-            border-radius: 66%;
-            line-height: 1;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-
-            .to {
-                position: absolute;
-                font-size: 2rem;
-                margin-left: -3rem;
-                font-style: italic;
-            }
-        }
-
-        .glitch {
-            font-size: 25vw;
-            line-height: 1;
-            font-family: 'Poppins', sans-serif;
-            font-weight: 700;
-            position:absolute;
-            top: 65%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            margin: 0;
-            text-decoration: none;
-            color: #fff;
-            &:before,
-            &:after{
-              display: block;
-              content: attr(data-text);
-              position: absolute;
-              top: 0;
-              left: 0;
-              height: 100%;
-              width: 100%;
-              opacity: .8;
-            }
-            &:after {
-              color: #f0f;
-              z-index: -2;
-              animation: glitch .3s cubic-bezier(.25, .46, .45, .94) reverse both infinite;
-            }
-            &:before {
-              color: #0ff;
-              z-index: -1;
-              animation: glitch .3s cubic-bezier(.25, .46, .45, .94) both infinite;
-            }
-        }
-
-        .b2b-text {
-            position: absolute;
-            width: 100%;
-            top: 80%;
-            left: 0;
-            color: white;
-        }
-    }
-}
-
-.retos-flyer {
-    p.retos-text {
-        font-size: 30vw;
-        margin: 0 0 0 20%;
-        font-weight: 800;
-        @include longshadow(#8a32f7, #2d0f52, 160);
+    .logo-text {
+        position: absolute;
+        top: 50%;
+        font-size: 9vw;
+        line-height:1;
+        text-align: right;
+        right: 4rem;
+        /*border: 2px dashed white; */
+        padding: 0.75rem;
+        margin: 3rem 0 0 0;
+        /* text-shadow: 6px -9px 0 #5b78f8; */
+        transform: translateY(-50%);
     }
 
-    .row-text {
-        margin-top: 8rem;
-        margin-bottom: 0;
-        padding-bottom: 5rem;
+    .row-button-suscribe {
+        position: absolute;
+        bottom: 0;
+        left: 3rem;
+        z-index: 999;
 
-        .retos-body {
-            .my-icon {
-                height: 6rem;
-            }
-            .retos-description {
-                font-size: 2rem;
-    
-                .dcalc-span {
-                    font-size: 7rem;
-                }
-    
-                .footer {
-                    font-size: 1rem;
-                }
-            }
+        .project-description {
+            width: 400px;
+            text-align: justify;
+        }
+
+        a {
+            height: 3rem;
+            line-height: 42px;
         }
     }
 }
 
 
-.fechas-flyer {
-    /* height: 155%; */
-    .row-centered {
-        padding-top: 10rem;
-        
-        .script {
-            font-size: 22vw;
-        }
+.section {
+    display: flex;
+    flex-direction: column;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    align-items: center;
+    padding: 90px 56px;
+
+    img.main-image {
+        display: inline-block;
+        vertical-align: middle;
+        width: 1100px;
+        height: 100%;
+        border-radius: 20px;
+        max-width: 100%;
     }
 
-    .row-middle {
-        padding-top: 3rem;
-        
-        .col {
-            margin-top: 3rem;
-        }
-
-        .zt-icons {
-            height: 16rem;
-        }
-    }
-
-    .row-footer {
-        padding-top: 5rem;
-        margin-bottom: 0;
-
-        .zt-icons {
-            height: 16rem;
+    &.fechas {
+        h1 {
+            font-size: 5rem;
+            margin: 0 0 0 20%;
+            font-weight: 800;
+            @include longshadow(#8a32f7, #2d0f52, 160);
         }
     }
 }
+
+.my-icon {
+    height: 40px;
+}
+
+.section.intro {
+    padding: 160px;
+}
+
+.bg-image-cover.retos {
+    .center-title {
+        top: 50%;
+        transform: translate(-50%, -50%);
+        left: 50%;
+        position: absolute;
+        font-size: 25vw;;
+    }
+}
+
+@media (max-width: 991px) {
+    .section {
+        padding: 50px;
+
+        img.main-image {
+            height: 100%; // 680px;
+            object-fit: contain;
+        }
+    }
+}
+@media (max-width: 767px) {
+    .section {
+        padding: 32px 25px;
+
+        img.main-image {
+            height: 100%; //380px;
+        }
+    }
+}
+@media (max-width: 479px) {
+    .section {
+        padding: 25px 20px;
+
+        img.main-image {
+            height: 100%; //360px;
+        }
+    }
+}
+
+
+
+.glitch {
+    font-size: 25vw;
+    line-height: 1;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+    position:absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    margin: 0;
+    text-decoration: none;
+    color: #fff;
+    &:before,
+    &:after{
+      display: block;
+      content: attr(data-text);
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 100%;
+      opacity: .8;
+    }
+    &:after {
+      color: #f0f;
+      z-index: -2;
+      animation: glitch .3s cubic-bezier(.25, .46, .45, .94) reverse both infinite;
+    }
+    &:before {
+      color: #0ff;
+      z-index: -1;
+      animation: glitch .3s cubic-bezier(.25, .46, .45, .94) both infinite;
+    }
+}
+
+.crossed-row {
+    height: 100vh;
+    width: 1100px;
+    transform: skew(0deg, 40deg);
+    margin-top: -7rem;
+    position: absolute;
+    box-shadow: 0px 0px 10px #333;
+}
+
 
 
 .general-container {
@@ -266,232 +216,5 @@
 
     .iframe-medium {
         display: block;
-    }
-}
-
-/* Portrait
-@media only screen 
-  and (max-width: 320px)
-  and (-webkit-min-device-pixel-ratio: 2)
-  and (orientation: portrait) {
-      .logo-text {
-          position: relative !important;
-          margin: 20% auto !important;
-          right: 0 !important;
-          font-size: 4rem !important;
-      }
-
-      .b2b-title-back {
-        font-size: 10rem !important;
-        top: 37% !important;
-        left: 50% !important;
-    }
-
-    .b2b-title-to {
-        top: 32% !important;
-        left: 63% !important;
-        font-size: 1.5rem !important;
-    }
-
-    .glitch {
-        font-size: 5rem !important;
-    }
-
-    p.retos-text {
-        font-size: 9rem !important;
-    }
-
-    .b2b-text {
-        left: 50% !important;
-    }
-}
-
-@media screen 
-  and (min-width: 321px)
-  and (max-width: 375px) {
-    .logo-text {
-        position: relative !important;
-        margin: 20% auto !important;
-        right: 0 !important;
-        font-size: 5rem !important;
-    }
-
-    .b2b-title-back {
-        font-size: 10rem !important;
-        top: 37% !important;
-        left: 50% !important;
-    }
-
-    .b2b-title-to {
-        top: 32% !important;
-        left: 63% !important;
-        font-size: 1.5rem !important;
-    }
-
-    .glitch {
-        font-size: 7rem !important;
-    }
-
-    p.retos-text {
-        font-size: 10rem !important;
-    }
-
-    .b2b-text {
-        left: 50% !important;
-    }
-}
-
-@media screen 
-  and (min-width: 376px)
-  and (max-width: 600px) {
-    .logo-text {
-        position: relative !important;
-        margin: 20% auto !important;
-        right: 0 !important;
-        font-size: 5rem !important;
-    }
-
-    .b2b-title-back {
-        font-size: 10rem !important;
-        top: 42% !important;
-        left: 40% !important;
-    }
-
-    .b2b-title-to {
-        top: 37% !important;
-        left: 52% !important;
-        font-size: 1.5rem !important;
-    }
-
-    .glitch {
-        font-size: 8rem !important;
-    }
-
-    p.retos-text {
-        font-size: 10rem !important;
-    }
-
-    .b2b-text {
-        left: 50% !important;
-    }
-}
-
-@media screen 
-  and (min-width: 601px)
-  and (max-width: 768px) {
-
-    .glitch {
-        font-size: 14rem !important;
-    }
-  }
-
-/* All lower than this
-@media screen and (max-width: 425px) {
-    .row-button-suscribe {
-        top: 75% !important;
-        left: 50% !important;
-
-        a {
-            width: 70vw !important;
-        }
-    }
-}
-*/
-
-
-/* PORTRAIT */
-@media screen and (min-width: 320px) and (max-width: 640px) and (orientation: portrait) {
-    .logo-image {
-        margin-left: 0 !important;
-        height: calc(100vh - 45vh) !important;
-        left: 50% !important;
-        transform: translateX(-50%) !important;
-    }
-
-    .logo-text {
-        top: 55% !important;
-    }
-
-    .row-button-suscribe {
-        .project-description {
-            width: 90% !important;
-        }
-    }
-
-    .iframe-mobile {
-        display: block !important;
-    }
-
-    .iframe-medium {
-        display: none !important;
-    }
-}
-
-@media screen and (min-width: 641px) and (max-width: 740px) and (orientation: portrait) {
-    .logo-image {
-        margin-left: 0 !important;
-        height: calc(100vh - 45vh) !important;
-        left: 50% !important;
-        transform: translateX(-50%) !important;
-    }
-
-    .logo-text {
-        top: 60% !important;
-    }
-
-    .row-button-suscribe {
-        .project-description {
-            width: 90% !important;
-        }
-    }
-}
-
-
-
-
-/* LANDSCAPE */
-@media screen and (max-width: 640px) and (orientation: landscape) {
-    .logo-image {
-        height: calc(100vh - 35vh) !important;
-    }
-
-    .logo-text {
-        top: 35% !important;
-        right: 1rem !important;
-    }
-
-    .row-button-suscribe {
-        .project-description {
-            width: 90% !important;
-            font-size: 2vw !important;
-        }
-    }
-
-
-    .b2b-title-back {
-        font-size: 35vw !important;
-    }
-}
-
-@media screen and (min-width: 641px) and (max-width: 740px) and (orientation: landscape) {
-    .logo-image {
-        height: calc(100vh - 27vh) !important;
-    }
-
-    .logo-text {
-        top: 35% !important;
-        right: 1rem !important;
-    }
-
-    .row-button-suscribe {
-        .project-description {
-            width: 90% !important;
-        }
-    }
-}
-
-@media screen and (max-width: 920px) and (orientation: landscape) {
-    .logo-text {        
-        right: 2rem !important;
     }
 }

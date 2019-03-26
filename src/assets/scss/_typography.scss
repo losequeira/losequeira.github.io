@@ -1,0 +1,148 @@
+// FONT
+
+@font-face {
+    font-family: 'AvenirBold';
+    src: url(../src/assets/fonts/AvenirNextLTPro-Bold.otf);
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'AvenirBoldItalic';
+    src: url(../src/assets/fonts/AvenirNextLTPro-BoldCnIt.otf);
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'AvenirNormal';
+    src: url(../src/assets/fonts/AvenirNextLTPro-Regular.otf);
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'AvenirLight';
+    src: url(../src/assets/fonts/AvenirNextLTPro-UltLtCn.otf);
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'AvenirHeavy';
+    src: url(../src/assets/fonts/AvenirNextLTPro-HeavyCn.otf);
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Scriptina Pro';
+    src: url(../src/assets/fonts/ScriptinaPro.woff) format('woff');
+    font-style: normal;
+    font-weight: normal;
+}
+
+ h1, h2, h3, h4, h5 {
+    font-family: AvenirBold;
+    margin: 0;
+}
+
+p {
+    font-family: AvenirBold;
+    margin: 0;
+}
+
+p.paragraph {
+    width: 100%;
+    font-family: Roboto, sans-serif;
+    color: #000;
+    font-size: 24px;
+    line-height: 40px;
+}
+
+.script {
+    font-family: 'Scriptina Pro';
+}
+
+.light-font {
+    font-family: AvenirLight
+}
+
+.regular-font {
+    font-family: AvenirNormal;
+}
+
+.italic {
+    font-style: italic;
+}
+
+.bold {
+    font-family: AvenirBold;
+}
+
+.boldItalic {
+    font-family: AvenirBoldItalic;
+}
+
+.heavy {
+    font-family: AvenirHeavy;
+}
+
+.big-font {
+    font-size: 170px;
+    line-height: 1;
+}
+
+
+@media (max-width: 1120px) {
+    h1 {
+        font-size: 4.2rem;
+    }
+}
+@media (max-width: 991px) {
+    h1, .big-font {
+        font-size: 75px;
+    }
+
+    h4 {
+        font-size: 56px;
+        line-height: 64px;
+    }
+
+    p.paragraph {
+        width: 100%;
+    }
+}
+
+@media (max-width: 767px) {
+    h1 {
+        font-size: 72px;
+        line-height: 64px;
+    }
+
+    h4 {
+        font-size: 30px;
+        line-height: 40px;
+    }
+}
+
+@media (max-width: 479px) {
+    h1 {
+        font-size: 52px;
+        line-height: 48px;
+    }
+
+    h4 {
+        font-size: 26px;
+        line-height: 36px;
+    }
+
+    p.paragraph {
+        margin-bottom: 0px;
+        line-height: 38px;
+    }
+
+    .big-font {
+        font-size: 58px;
+    }
+}

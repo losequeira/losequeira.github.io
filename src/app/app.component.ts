@@ -1,6 +1,8 @@
 import { Component } from '@angular/core';
 import { DomSanitizer, SafeResourceUrl } from '@angular/platform-browser';
 
+import * as AOS from 'aos';
+
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -13,6 +15,11 @@ export class AppComponent {
 
   constructor(private sanitizer: DomSanitizer) {
     this.formURl = this.sanitizer.bypassSecurityTrustResourceUrl(this.formSource);
+  }
+
+  ngOnInit() {
+    console.log("AOS:", AOS);
+    AOS.init();
   }
 
   getFormSource() {

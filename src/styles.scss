@@ -1,123 +1,15 @@
 
+@charset "UTF-8";
+
+@import "src/assets/scss/typography.scss";
+@import "src/assets/scss/colors.scss";
+
 html, body { height: 100%; overflow-x: hidden; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 
 .fullscreen {
     height: auto;
     min-height: 100vh;
-}
-
-
-
-$red: #d92d5a;
-$orange: #fd8a13;
-$yellow: #ffea01;
-$green: #0ed166;
-$dark-green: #70b6d8;
-$blue: #5b78f8;
-$purple: #8a32f7;
-$dark-purple: #2d0f52;
-$white: #fff;
-$pink: #df89e8;
-
-$colors: (
-    "red": $red,
-    "orange": $orange,
-    "yellow": $yellow,
-    "green": $green,
-    "dark-green": $dark-green,
-    "blue": $blue,
-    "purple": $purple,
-    "dark-purple": $dark-purple,
-    "white": $white,
-    "pink": $pink
-) !default;
-
-$directions: (
-    "tr": to right,
-    "tbr": to bottom right,
-    "ttr": to top right,
-    "tl": to left,
-    "tbl": to bottom left,
-    "ttl": to top left,
-    "tb": to bottom,
-    "tt": to top
-) !default;
-
-@each $color_name, $color in $colors {
-    .#{$color_name} {
-        background-color: $color !important;
-    }
-    .#{$color_name}-text {
-        color: $color !important;
-    }
-  }
-
-  @each $color_name, $color in $colors {
-    @each $color_name_2, $color_2 in $colors {
-        @each $dir_name, $dir_value in $directions {
-            .#{$color_name}-#{$color_name_2}-#{$dir_name} {
-                background-color: $color !important;
-                background-image: linear-gradient(#{$dir_value}, #{$color}, #{$color_2});
-            }       
-        }
-    }
-  }
-
-
-
-
-  // FONT
-
-@font-face {
-    font-family: 'AvenirBold';
-    src: url(../src/assets/fonts/AvenirNextLTPro-Bold.otf),
-        url(../src/assets/fonts/AvenirNextLTPro-BoldCn.otf),
-        url(../src/assets/fonts/AvenirNextLTPro-BoldCnIt.otf);
-    font-weight: normal;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: 'AvenirNormal';
-    src: url(../src/assets/fonts/AvenirNextLTPro-Regular.otf);
-    font-weight: normal;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: 'AvenirLight';
-    src: url(../src/assets/fonts/AvenirNextLTPro-UltLtCn.otf);
-    font-weight: normal;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: 'Scriptina Pro';
-    src: url(../src/assets/fonts/ScriptinaPro.woff) format('woff');
-    font-style: normal;
-    font-weight: normal;
-}
-
-
- h1, h2, h3, h4, h5, p {
-    font-family: AvenirBold;
-}
-
-.script {
-    font-family: 'Scriptina Pro';
-}
-
-.light-font {
-    font-family: AvenirLight
-}
-
-.regular-font {
-    font-family: AvenirNormal;
-}
-
-.bold {
-    font-family: AvenirBold;
 }
 
 .relative {
@@ -128,6 +20,14 @@ $directions: (
     position: absolute !important;
 }
 
+.right {
+    float: right !important;
+}
+
+.center {
+    text-align: center !important;
+}
+
 .none {
     display: none !important;
 }
@@ -136,6 +36,95 @@ $directions: (
     margin: 0 !important;
 }
 
+.margin-top {
+    margin-top: 5rem;
+}
+
+.margin-bottom {
+    margin-bottom: 5rem;
+}
+
+.padding {
+    padding: 1.75rem !important;
+}
+
+.medium-padding {
+    padding: 3rem !important;
+}
+
+.low-padding {
+    padding: .25rem !important;
+}
+
+/* Sizes */
+
+.mediumScreen {
+    height: auto;
+    min-height: 50%;
+}
+
+
+/* SCROLL FIRE CLASSES*/
+.scroll-show {
+    transform: translateZ(0);
+    opacity: 1;
+}
+
+.scroll-hide {
+    transform: translate3d(0, 100px,0);
+    opacity: 0;
+}
+
+/* Background Images */
+.bg-image-cover {
+    width: 100%;
+    height: 900px;
+    background-image:url("../src/assets/img/casa-rara.jpg");
+    background-position: 50% 50%;
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    &.basics {
+        background-image:url("../src/assets/img/casa-rara.jpg");
+    }
+
+    &.back-to-basics {
+        background-image:url("../src/assets/img/back-to-basics.png");
+    }
+
+    &.retos {
+        background-image:url("../src/assets/img/retos.png");
+    }
+
+    &.all-photos {
+        background-image:url("../src/assets/img/big-flyer.png");
+    }
+}
+
+@media (max-width: 991px) {
+    .bg-image-cover {
+        height: 680px;
+        background-size: cover;
+    }
+}
+@media (max-width: 767px) {
+    .bg-image-cover {
+        height: 380px;
+    }
+}
+@media (max-width: 479px) {
+    .bg-image-cover {
+        height: 360px;
+    }
+}
+
+.sepia {
+    filter: sepia(50%);
+}
+
+.grayscale {
+    filter: grayscale(50%)
+}
 
 
 
