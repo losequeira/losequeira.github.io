@@ -1,0 +1,64 @@
+$red: #d92d5a;
+$orange: #fd8a13;
+$yellow: #ffe40c;//#ffea01;
+$green: #0ed166;
+$dark-green: #70b6d8;
+$blue: #5b78f8;
+$light-blue: #59d5ff;
+$purple: #8a32f7;
+$dark-purple: #2d0f52;
+$white: #fff;
+$pink: #df89e8;
+$gray: #bec2c7;
+$black: #000;
+
+$colors: (
+    "red": $red,
+    "orange": $orange,
+    "yellow": $yellow,
+    "green": $green,
+    "dark-green": $dark-green,
+    "blue": $blue,
+    "light-blue": $light-blue,
+    "purple": $purple,
+    "dark-purple": $dark-purple,
+    "white": $white,
+    "pink": $pink,
+    "gray": $gray,
+    "black": $black
+) !default;
+
+$directions: (
+    "tr": to right,
+    "tbr": to bottom right,
+    "ttr": to top right,
+    "tl": to left,
+    "tbl": to bottom left,
+    "ttl": to top left,
+    "tb": to bottom,
+    "tt": to top
+) !default;
+
+@each $color_name, $color in $colors {
+    .#{$color_name} {
+        background-color: $color !important;
+    }
+    .#{$color_name}-text {
+        color: $color !important;
+    }
+
+    .#{$color-name}-shadow {
+        text-shadow: 4px 4px $color !important;
+    }
+  }
+
+  @each $color_name, $color in $colors {
+    @each $color_name_2, $color_2 in $colors {
+        @each $dir_name, $dir_value in $directions {
+            .#{$color_name}-#{$color_name_2}-#{$dir_name} {
+                background-color: $color !important;
+                background-image: linear-gradient(#{$dir_value}, #{$color}, #{$color_2});
+            }       
+        }
+    }
+  }
